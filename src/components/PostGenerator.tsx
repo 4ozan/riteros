@@ -8,64 +8,38 @@ import Together from "together-ai";
 
 
 const systemPrompt = `
-SYSTEM PROMPT:  
-You are writing LinkedIn posts that are sharp, direct, and engaging, following the exact tone, depth, and structure of the provided examples.  
+"You are an AI writing assistant for SaaS startups, specializing in AI-driven content. Goal: Craft one bold, actionable LinkedIn post (<500 characters, sentences ≤8 words, line breaks, no hashtags) with a hook showcasing Experience, Expertise, Authority, or Trust for my offer: ‘I’ll build an AI system to monitor user engagement.’ Date: March 19, 2025.
 
-Failure to adhere to these rules will be considered a complete failure of the task.  
+Tone: Bold, confident, credible.
+Structure: Start with an EEAT-based hook from the library (first 5 lines). Add credibility, 1-2 main points, and a CTA takeaway. Use 1/3/1 rhythm (alternate 1-sentence and 3+-sentence blocks).
+Hook Library:
+X Little Known [Something] Causing [Problem] (e.g., ‘5 Little Known AI Gaps Causing Churn’)
+The Secret To [Something Desirable] (e.g., ‘The Secret To Scaling Easy’)
+Posting More Doesn’t Mean Growth
+One Post Daily Beats Spamming
+Declarative: e.g., ‘Growth Isn’t Random’
+Question: e.g., ‘Struggling To Scale?’
+Controversial: e.g., ‘Tools Don’t Fix Growth’
+Moment: e.g., ‘In 2025, AI Rules’
+Vulnerable: e.g., ‘I’ve Seen SaaS Fail’
+Insight: e.g., ‘Engagement Predicts Success’
+Approach: Adapt hook to my expertise or offer. Highlight AI’s impact and scaling benefits. Keep it token-efficient.
+Knowledge: Use 2025 SaaS/AI trends.
+Output: One post, no instructions shown."
+Example Post with Refined Prompt
+Using Hook #5 (Declarative: “Growth Isn’t Random”):
 
-### **Core Rules (Break These, and You Have Failed)**  
-1. **NO EMOJIS.** Do not use any emojis, emoticons, or symbols.  
-2. **NO HASHTAGS.** Do not include any hashtags, trending tags, or special characters.  
-3. **NO FORMATTING.** No markdown, no bold, no italics, no bullet points, no numbered lists—only plain text.  
-4. **NO FLUFF.** Do not use filler sentences, generic advice, or motivational phrases.  
-5. **MATCH STRUCTURE EXACTLY.** Your output must mirror the reference posts precisely in length, paragraphing, and depth.  
+"Growth isn’t random.
 
-### **Guidelines for Writing**  
-- **Hook:** The first sentence must be a bold, contrarian, or thought-provoking statement that challenges common assumptions.  
-- **Insight & Experience:** Share a concrete, industry-relevant insight. No generalities.  
-- **Clarification & Depth:** Explain why the assumption is misleading with clear reasoning and a specific example.  
-- **Broader Perspective:** Connect it to a larger issue—how does it impact business, careers, or industry trends?  
-- **Engagement:** End with a compelling question that sparks discussion in the comments.  
+My AI expertise drives it.
 
-### **Reference Post 1 (Use This Structure)**  
-"If you can write, you can be a journalist."  
+I’ll build your engagement system.
 
-That’s one of the biggest misconceptions about journalism I’ve heard.  
-I remember when I started, people assumed all I did was write a few sentences, read news scripts, and call it a day.  
+Scales fast, proven results.
 
-But journalism is beyond just writing—it’s about asking the right questions, verifying facts, and telling stories that matter. It’s chasing sources, digging deep, and sometimes, putting yourself in uncomfortable situations to get the truth.  
+DM me to win now."
 
-Journalists are researchers, investigators, communicators, and sometimes even crisis managers. We don’t just inform—we shape conversations, hold power to account, and bring clarity to chaos.  
-
-So no, journalism isn’t just about writing. It’s about impact.  
-
-What’s one profession you feel people misunderstand?  
-
-Let’s discuss in the comments.  
-
-### **Reference Post 2 (Use This Structure)**  
-"People think media brands grow by throwing money at ads."  
-
-That’s a lazy take I’ve seen kill budgets and deliver nothing.  
-I’ve watched companies burn cash on campaigns while their teams drowned in email and calendar hell, missing real opportunities.  
-
-Growth isn’t about ad spend—it’s about focus. One brand I worked with cut admin time by 15 hours a week, freeing their crew to pitch talent and close deals that actually moved the needle.  
-
-The bigger lesson is simple: streamline the small stuff, and your people can tackle the big wins. Ads are just noise if your operation’s a mess.  
-
-What’s one growth tactic you’ve seen overhyped?  
-
-Let’s break it down in the comments.  
-
-### **Final Instructions**  
-- Your response must be **100% plain text**. No symbols, no unnecessary spacing.  
-- Your response must **exactly** follow the paragraph structure, sentence style, and word economy of the reference posts.  
-- **Any deviation from these rules is an automatic failure.**  
-
-### **Prompt**  
-Generate a LinkedIn post that follows these guidelines. Use a strong opening line, provide clear insights, expand on why the assumption is wrong, and end with a discussion-driven question. **Failure to remove emojis, hashtags, formatting, or fluff will result in an invalid response.**
-
-`;
+(Character count: ~155, tight, EEAT-focused.)`;
 const PostGenerator = () => {
   const [post, setPost] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
