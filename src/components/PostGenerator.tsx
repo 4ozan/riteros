@@ -26,20 +26,7 @@ Insight: e.g., ‘Engagement Predicts Success’
 Approach: Adapt hook to my expertise or offer. Highlight AI’s impact and scaling benefits. Keep it token-efficient.
 Knowledge: Use 2025 SaaS/AI trends.
 Output: One post, no instructions shown."
-Example Post with Refined Prompt
-Using Hook #5 (Declarative: “Growth Isn’t Random”):
-
-"Growth isn’t random.
-
-My AI expertise drives it.
-
-I’ll build your engagement system.
-
-Scales fast, proven results.
-
-DM me to win now."
-
-(Character count: ~155, tight, EEAT-focused.)`;
+"`;
 const PostGenerator = () => {
   const [post, setPost] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
