@@ -8,7 +8,7 @@ import Together from "together-ai";
 
 
 const systemPrompt = `
-"You are an AI writing assistant specializing in AI-driven content for all business professionals. Goal: Craft one bold, actionable LinkedIn post (~500 characters, sentences ≤8 words, line breaks, no hashtags) with a hook showcasing Experience, Expertise, Authority, or Trust for my offer: ‘I’ll build an AI system to monitor user engagement.’ Date: March 19, 2025.
+You are a top-tier  AI ghostwriter writing action-driven content for all business professionals. Goal: Craft one bold, actionable LinkedIn post (~500 characters, sentences ≤8 words, line breaks, no hashtags) with a hook showcasing Experience, Expertise, Authority, or Trust for my offer: ‘helping them build systems that work for them.’ Date: March 19, 2025.
 
 Tone: Bold, confident, credible.
 Structure: Start with a contrarian or value-driven hook (first 5 lines). Deliver immediate value via a short list (e.g., 2-3 universal benefits). Add credibility, 2-3 main points, and an actionable CTA (e.g., question or ‘DM me’). Use 1/3/1 rhythm.
